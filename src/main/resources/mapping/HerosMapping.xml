@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sun.demo.mapper.HeroMapper">
+
+    <resultMap id="hero" type="com.sun.demo.model.Heros">
+        <result column="id" jdbcType="VARCHAR" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="anotherName" jdbcType="VARCHAR" property="anotherName" />
+        <result column="position" jdbcType="VARCHAR" property="position" />
+        <result column="site" jdbcType="VARCHAR" property="site" />
+        <result column="motto" jdbcType="VARCHAR" property="motto" />
+        <result column="price" jdbcType="VARCHAR" property="price" />
+        <result column="skill_q" jdbcType="VARCHAR" property="skill_q" />
+        <result column="skill_w" jdbcType="VARCHAR" property="skill_w" />
+        <result column="skill_e" jdbcType="VARCHAR" property="skill_e" />
+        <result column="skill_r" jdbcType="VARCHAR" property="skill_r" />
+        <result column="unactive" jdbcType="VARCHAR" property="unactive" />      
+        <result column="created_By" jdbcType="VARCHAR" property="created_By" />
+        <result column="created_Date" jdbcType="VARCHAR" property="created_Date" />
+        <result column="update_By" jdbcType="VARCHAR" property="update_By" />
+        <result column="update_Date" jdbcType="VARCHAR" property="update_Date" />
+        <result column="is_Vaild" jdbcType="VARCHAR" property="is_Vaild" />
+    </resultMap>
+    
+    <select id="getAllHeros" resultMap="hero">
+        select * from heros_info 
+    </select>
+    
+     <select id="getAllHero"  parameterType="java.lang.String" resultMap="hero">
+        select * from heros_info t 
+        where
+		t.name=#{name,jdbcType=VARCHAR}
+		<if test="site != null and site != '' ">
+			and t.site=#{site,jdbcType=VARCHAR}
+		</if>
+    </select>
+    
+    <!-- 新增人物信息 -->
+	<insert id="insertHero" parameterType="com.sun.demo.model.Heros">
+		insert into heros_info
+		(
+		name,
+		anotherName,
+		position,
+		site,
+		motto,
+		price,
+		skill_q,
+		skill_w,
+		skill_e,
+		skill_r,
+		unactive,
+		created_By,
+		created_Date,
+		update_By,
+		update_Date,
+		is_Vaild)
+		values
+		(
+		#{name,jdbcType=VARCHAR},
+		#{anotherName,jdbcType=VARCHAR},
+		#{position,jdbcType=VARCHAR},
+		#{site,jdbcType=VARCHAR},
+		#{motto,jdbcType=VARCHAR},
+		#{price,jdbcType=VARCHAR},
+		#{skill_q,jdbcType=VARCHAR},
+		#{skill_w,jdbcType=VARCHAR},
+		#{skill_e,jdbcType=VARCHAR},
+		#{skill_r,jdbcType=VARCHAR},
+		#{unactive,jdbcType=VARCHAR},
+		'ex_sunqi',
+		now(),
+		'ex_sunqi',
+		now(),
+		"1")
+	</insert>
+    
+</mapper>
