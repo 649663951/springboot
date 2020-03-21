@@ -7,8 +7,11 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import com.sun.demo.constant.Result;
 import com.sun.demo.constant.URLConstant;
 import com.sun.demo.constant.Views;
 import com.sun.demo.model.Heros;
@@ -77,6 +80,8 @@ public class HerosController {
 		hero.setSkill_r(skill_r);
 		hero.setUnactive(unactive);
 		herosInfoService.insertHero(hero);
+		List<Heros> heros = herosInfoService.getAllHeros();
+		model.addAttribute("heros", heros);
 		return Views.HEROS;
 	}
 	
@@ -84,6 +89,17 @@ public class HerosController {
 	@RequestMapping(value=URLConstant.EDIT , method=RequestMethod.GET)
 	public String editHero(Model model , HttpServletRequest request) {
 		return Views.EDIT;
+	}
+	
+	@RequestMapping(value=URLConstant.DELETE , method=RequestMethod.DELETE)
+	public @ResponseBody Result deleteHero(Model model , @PathVariable String id) {
+		 try {
+			herosInfoService.deleteHero(id);
+		} catch (Exception e) {
+			logger.error(e);
+			return new Result(0, e.getMessage());
+		}
+		return new Result(1);
 	}
 
 }

@@ -23,7 +23,18 @@ public class Result<T> {
 		this.message = message;
 		this.data = data;
 	}
+	
+	public Result(Integer code, String message) {
+		super();
+		this.code = code;
+		this.message = message;
+	}
 
+	public Result(int code) {
+		super();
+		this.code = code;
+	}
+	
 	@Override
 	public String toString() {
 		return "Result [code=" + code + ", message=" + message + ", data=" + data + "]";

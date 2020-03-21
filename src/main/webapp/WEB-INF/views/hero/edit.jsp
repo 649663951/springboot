@@ -50,7 +50,7 @@
                     <li class="active">人物介绍</li>
                   </ul>
 
-                  <form class="form-horizontal form-label-left" action="<%=request.getContextPath()%>/heros/adds"  method="post" id="createForm">
+                  <form class="form-horizontal form-label-left" action="<%=request.getContextPath()%>/heros/add"  method="post" id="createForm">
                     <div class="container-fluid">
                       <div class="row-fluid">
                         <div class="span12">

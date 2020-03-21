@@ -28,4 +28,9 @@ public class HerosInfoImpl  implements IHerosInfoService{
 		heroMapper.insertHero(hero);
 	}
 
+	@Override
+	public void deleteHero(String id) {
+		heroMapper.deleteHero(id);
+	}
+
 }

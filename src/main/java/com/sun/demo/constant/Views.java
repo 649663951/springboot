@@ -19,6 +19,6 @@ public class Views {
 	
 	public static final String ADD="hero/add";
 	
-	public static final String EDIT="/edit";
+	public static final String EDIT="hero/edit";
 	
 }

@@ -30,5 +30,11 @@ public interface HeroMapper {
 	  */
 	 public void insertHero(Heros hero);
 	 
+	 /**
+	  * 删除英雄信息
+	  * @param hero
+	  */
+	 public void deleteHero(String id);
+	 
 
 }

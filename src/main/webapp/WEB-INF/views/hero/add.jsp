@@ -3,7 +3,6 @@
 <html>
 
 <head>
-  <title>安盛云平台V2.0</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <%@ include file="/WEB-INF/views/common.jsp"%>
   
@@ -50,7 +49,7 @@
                     <li class="active">人物介绍</li>
                   </ul>
 
-                  <form class="form-horizontal form-label-left" action="<%=request.getContextPath()%>/heros/adds"  method="post" id="createForm">
+                  <form class="form-horizontal form-label-left" action="<%=request.getContextPath()%>/heros/add" onsubmi="return dosubmit()" method="post" id="createForm">
                     <div class="container-fluid">
                       <div class="row-fluid">
                         <div class="span12">
@@ -61,9 +60,6 @@
                               </li>
                               <li>
                                 <a href="#lable" data-toggle="tab">皮肤</a>
-                              </li>
-                              <li>
-                                <a href="#rules" data-toggle="tab">人物背景</a>
                               </li>
                             </ul>
                             <div class="tab-content">
@@ -110,7 +106,6 @@
                                       <option value="法师" selected="selected">法师</option>
                                       <option value="战士">战士</option>
                                       <option value="射手">射手</option>
-                                      <option value="辅助">辅助</option>
                                       <option value="刺客">刺客</option>
                                       <option value="坦克">坦克</option>
                                     </select>
@@ -200,7 +195,7 @@
                                 </fieldset>
                               </div>
                               
-                               <div class="tab-pane" id="lable"><br>
+                              <div class="tab-pane" id="lable"><br>
                                  <legend>皮肤信息：</legend>
 
                                 <br>
@@ -223,19 +218,6 @@
                                   <input id="lableNum" name="lableNum" type="hidden" value="0" />
                                 </div>
                               </div>
-                        
-                              <div class="tab-pane" id="rules">
-                                <br>
-                                    <legend>人物背景：</legend>
-                                <div class="form-group">
-                                  <label class="control-label col-md-1 col-sm-3 col-xs-12 appClass" for="name">名称：
-                                    <span class="required">*</span>
-                                  </label>
-                                  <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="请输入人物名称" autocomplete="off" required="required" type="text" value="">
-                                  </div>
-                                </div>
-                                </div>
                             </div>
                           </div>
                         </div>

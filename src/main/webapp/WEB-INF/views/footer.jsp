@@ -44,7 +44,7 @@
     <!--highcharts组件 -->
 	<script src="<%=request.getContextPath() %>/highcharts/highcharts.js"></script>
 	<script src="<%=request.getContextPath() %>/highcharts/highcharts-more.js"></script>
-	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<!-- <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script> -->
 	<script src="<%=request.getContextPath() %>/highcharts/solid-gauge.js"></script>
     <!-- echarts组件 -->
     <script src="<%=request.getContextPath() %>/echarts/echarts.min.js"></script>

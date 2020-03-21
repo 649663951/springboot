@@ -15,5 +15,7 @@ public interface IHerosInfoService {
 	public List<Heros> getAllHero(String name , String site);
 	
 	public void insertHero(Heros hero);
+	
+	public void deleteHero(String id);
 
 }
