@@ -87,8 +87,41 @@ public class HerosController {
 	
 	
 	@RequestMapping(value=URLConstant.EDIT , method=RequestMethod.GET)
-	public String editHero(Model model , HttpServletRequest request) {
+	public String editHero(Model model , @PathVariable String id) {
+		Heros hero = herosInfoService.getHero(id);
+		model.addAttribute("hero", hero);
 		return Views.EDIT;
+	}
+	
+	@RequestMapping(value=URLConstant.EDITS , method=RequestMethod.POST)
+	public String editHeros(Model model , HttpServletRequest request) {
+		String name = request.getParameter("name");
+		String anotherName = request.getParameter("anotherName");
+		String position = request.getParameter("position");
+		String site = request.getParameter("site");
+		String motto = request.getParameter("motto");
+		String price = request.getParameter("price");
+		String skill_q = request.getParameter("skill_q");
+		String skill_w = request.getParameter("skill_w");
+		String skill_e = request.getParameter("skill_e");
+		String skill_r = request.getParameter("skill_r");
+		String unactive = request.getParameter("unactive");
+		Heros hero = new Heros();
+		hero.setName(name);
+		hero.setAnotherName(anotherName);
+		hero.setPosition(position);
+		hero.setSite(site);
+		hero.setMotto("'"+motto+"'");
+		hero.setPrice(price);
+		hero.setSkill_q(skill_q);
+		hero.setSkill_w(skill_w);
+		hero.setSkill_e(skill_e);
+		hero.setSkill_r(skill_r);
+		hero.setUnactive(unactive);
+		herosInfoService.updateHero(hero);
+		List<Heros> heros = herosInfoService.getAllHeros();
+		model.addAttribute("heros", heros);
+		return Views.HEROS;
 	}
 	
 	@RequestMapping(value=URLConstant.DELETE , method=RequestMethod.DELETE)

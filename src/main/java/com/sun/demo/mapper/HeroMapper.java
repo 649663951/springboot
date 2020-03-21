@@ -36,5 +36,17 @@ public interface HeroMapper {
 	  */
 	 public void deleteHero(String id);
 	 
+	 /**
+	  * 根据人物id查询英雄信息
+	  * @param hero
+	  */
+	 public Heros getHero(String id);
+	 
+	 /**
+	  * 修改人物信息
+	  * @param hero
+	  */
+	 public Heros updateHero(Heros hero);
+	 
 
 }

@@ -33,7 +33,7 @@ function removeHero(id) {
           			success : function(data) {
           				 if(data.code) {
           					BootstrapDialog.alert({
-          			            title: '安盛云系统提示',
+          			            title: '联盟管理系统提示',
           			            message: '删除人物信息成功!',
           			            type: BootstrapDialog.TYPE_PRIMARY, 
           			            closable: true, 

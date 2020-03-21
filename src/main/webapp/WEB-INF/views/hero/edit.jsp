@@ -3,7 +3,6 @@
 <html>
 
 <head>
-  <title>安盛云平台V2.0</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <%@ include file="/WEB-INF/views/common.jsp"%>
   
@@ -50,7 +49,7 @@
                     <li class="active">人物介绍</li>
                   </ul>
 
-                  <form class="form-horizontal form-label-left" action="<%=request.getContextPath()%>/heros/add"  method="post" id="createForm">
+                  <form class="form-horizontal form-label-left" action="<%=request.getContextPath()%>/heros/edits"  method="post" id="createForm">
                     <div class="container-fluid">
                       <div class="row-fluid">
                         <div class="span12">
@@ -61,9 +60,6 @@
                               </li>
                               <li>
                                 <a href="#lable" data-toggle="tab">皮肤</a>
-                              </li>
-                              <li>
-                                <a href="#rules" data-toggle="tab">人物背景</a>
                               </li>
                             </ul>
                             <div class="tab-content">
@@ -84,7 +80,7 @@
                                     <span class="required">*</span>
                                   </label>
                                   <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="请输入人物名称" autocomplete="off" required="required" type="text" value="">
+                                    <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="请输入人物名称" autocomplete="off" required="required" type="text" value="${hero.name}">
                                   </div>
                                 </div>
 
@@ -95,7 +91,7 @@
                                         <span class="required">*</span>
                                       </label>
                                       <div class="col-md-2 col-sm-6 col-xs-12">
-                                        <input type="text" id="anotherName" name="anotherName" class="form-control col-md-7 col-xs-12" value="" placeholder="请输入人物中文名称">
+                                        <input type="text" id="anotherName" name="anotherName" class="form-control col-md-7 col-xs-12" value="${hero.anotherName}" placeholder="请输入人物中文名称">
                                       </div>
                                     </div>
                                   </div>
@@ -110,7 +106,6 @@
                                       <option value="法师" selected="selected">法师</option>
                                       <option value="战士">战士</option>
                                       <option value="射手">射手</option>
-                                      <option value="辅助">辅助</option>
                                       <option value="刺客">刺客</option>
                                       <option value="坦克">坦克</option>
                                     </select>
@@ -137,7 +132,7 @@
                                     <span class="required">*</span>
                                   </label>
                                   <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <input id="price" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="price" placeholder="请输入定价" autocomplete="off" required="required" type="text" value="">
+                                    <input id="price" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="price" placeholder="请输入定价" autocomplete="off" required="required" type="text" value="${hero.price}">
                                   </div>
                                 </div>
                                 
@@ -146,7 +141,7 @@
                                     <span class="required">*</span>
                                   </label>
                                   <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <input id="motto" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="motto" placeholder="请输入座右铭" autocomplete="off" required="required" type="text" value="">
+                                    <input id="motto" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="motto" placeholder="请输入座右铭" autocomplete="off" required="required" type="text" value="${hero.motto}">
                                   </div>
                                 </div>
 
@@ -161,14 +156,14 @@
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="skill_q" name="skill_q" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入">
+                                      <input type="text" id="skill_q" name="skill_q" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_q}">
                                     </div>
 
                                     <label class="control-label col-md-1 col-sm-3 col-xs-12 health" for="rPeriod">W：
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="skill_w" name="skill_w" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入">
+                                      <input type="text" id="skill_w" name="skill_w" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_w}">
                                     </div>
 
                                   </div>
@@ -178,14 +173,14 @@
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="skill_e" name="skill_e" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入">
+                                      <input type="text" id="skill_e" name="skill_e" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_e}">
                                     </div>
 
                                     <label class="control-label col-md-1 col-sm-3 col-xs-12 health" for="rTimeout">R：
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="skill_r" name="skill_r" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入">
+                                      <input type="text" id="skill_r" name="skill_r" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入"  value="${hero.skill_r}">
                                     </div>
                                   </div>
 
@@ -194,7 +189,7 @@
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="unactive" name="unactive" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入">
+                                      <input type="text" id="unactive" name="unactive" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.unactive}">
                                     </div>
                                   </div>
                                 </fieldset>
@@ -223,19 +218,6 @@
                                   <input id="lableNum" name="lableNum" type="hidden" value="0" />
                                 </div>
                               </div>
-                        
-                              <div class="tab-pane" id="rules">
-                                <br>
-                                    <legend>人物背景：</legend>
-                                <div class="form-group">
-                                  <label class="control-label col-md-1 col-sm-3 col-xs-12 appClass" for="name">名称：
-                                    <span class="required">*</span>
-                                  </label>
-                                  <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="请输入人物名称" autocomplete="off" required="required" type="text" value="">
-                                  </div>
-                                </div>
-                                </div>
                             </div>
                           </div>
                         </div>

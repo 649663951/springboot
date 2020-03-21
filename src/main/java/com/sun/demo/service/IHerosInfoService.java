@@ -12,10 +12,15 @@ public interface IHerosInfoService {
 	
 	public List<Heros> getAllHeros();
 	
+	public Heros getHero(String id);
+	
 	public List<Heros> getAllHero(String name , String site);
 	
 	public void insertHero(Heros hero);
 	
 	public void deleteHero(String id);
+	
+	public void updateHero(Heros hero);
+
 
 }

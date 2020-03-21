@@ -107,8 +107,8 @@
 																<i class="fa fa-ellipsis-h"></i> 
 														</a>
 													    <ul class="dropdown-menu" role="menu">
-													    	<li><a href="<%=request.getContextPath() %>/heros/info/id/"><i class="fa fa-search"></i>查看</a></li>
-															<li><a href="<%=request.getContextPath() %>/heros/edit/id/"><i class="fa fa-edit"></i>编辑</a></li>
+													    	<li><a href="<%=request.getContextPath() %>/heros/info/${heros.id}/"><i class="fa fa-search"></i>查看</a></li>
+															<li><a href="<%=request.getContextPath() %>/heros/edit/${heros.id}/"><i class="fa fa-edit"></i>编辑</a></li>
 															<li><a href="#" onClick="removeHero('${heros.id}')"><i class="fa fa-trash-o"></i>删除</a></li>
                                                         </ul>
 														</div>

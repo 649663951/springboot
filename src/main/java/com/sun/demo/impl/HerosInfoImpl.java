@@ -33,4 +33,14 @@ public class HerosInfoImpl  implements IHerosInfoService{
 		heroMapper.deleteHero(id);
 	}
 
+	@Override
+	public Heros getHero(String id) {
+		return heroMapper.getHero(id);
+	}
+
+	@Override
+	public void updateHero(Heros hero) {
+		heroMapper.updateHero(hero);
+	}
+
 }

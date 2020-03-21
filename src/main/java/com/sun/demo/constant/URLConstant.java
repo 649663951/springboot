@@ -20,8 +20,10 @@ public class URLConstant {
 	public static final String INFO = "/info";
 	
 	public static final String ADD = "/add";
+	
+	public static final String EDITS = "/edits";
 		
-	public static final String EDIT = "/edit";
+	public static final String EDIT = "/edit/{id}";
 	
 	public static final String DELETE = "/delete/{id}";
 }
