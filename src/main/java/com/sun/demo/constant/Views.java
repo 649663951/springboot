@@ -21,4 +21,6 @@ public class Views {
 	
 	public static final String EDIT="hero/edit";
 	
+	public static final String DETAILS="hero/details";
+	
 }

@@ -74,14 +74,12 @@
 		                             <img class="double-border"  src="<%=request.getContextPath()%>/images/team.jpg" style="border-radius: 200px; width: 250px; height: 250px"   alt="">
                                 </div>
 
-								<input id="id" name="id" type="hidden" value="${hero.id}">
-								
                                 <div class="form-group">
                                   <label class="control-label col-md-1 col-sm-3 col-xs-12 appClass" for="name">名称：
                                     <span class="required">*</span>
                                   </label>
                                   <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="请输入人物名称" autocomplete="off" required="required" type="text" value="${hero.name}">
+                                    <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="请输入人物名称" autocomplete="off" required="required" type="text" value="${hero.name}" readonly="readonly">
                                   </div>
                                 </div>
 
@@ -92,7 +90,7 @@
                                         <span class="required">*</span>
                                       </label>
                                       <div class="col-md-2 col-sm-6 col-xs-12">
-                                        <input type="text" id="anotherName" name="anotherName" class="form-control col-md-7 col-xs-12" value="${hero.anotherName}" placeholder="请输入人物中文名称">
+                                        <input type="text" id="anotherName" name="anotherName" class="form-control col-md-7 col-xs-12" value="${hero.anotherName}" placeholder="请输入人物中文名称" readonly="readonly">
                                       </div>
                                     </div>
                                   </div>
@@ -103,9 +101,9 @@
                                     <span class="required">*</span>
                                   </label>
                                   <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <select class="form-control" name="position" id="position">
+                                    <select class="form-control" name="position" id="position" disabled="disabled">
                                       <option value="法师" <c:if test="${hero.position == '法师' }">selected</c:if>>法师</option>
-                                      <option value="战士" <c:if test="${hero.position == '战士'      }">selected</c:if>>战士</option>
+                                      <option value="战士" <c:if test="${hero.position ==  '战士'    }">selected</c:if>>战士</option>
                                       <option value="射手" <c:if test="${hero.position == '射手' }">selected</c:if>>射手</option>
                                       <option value="刺客" <c:if test="${hero.position == '刺客' }">selected</c:if>>刺客</option>
                                       <option value="坦克" <c:if test="${hero.position == '坦克' }">selected</c:if>>坦克</option>
@@ -118,7 +116,7 @@
                                     <span class="required">*</span>
                                   </label>
                                   <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <select class="form-control" name="site" id="site">
+                                    <select class="form-control" name="site" id="site" disabled="disabled">
                                       <option value="上单" <c:if test="${hero.site == '上单' }">selected</c:if>>上单</option>
                                       <option value="中单" <c:if test="${hero.site == '中单' }">selected</c:if>>中单</option>
                                       <option value="打野" <c:if test="${hero.site == '打野' }">selected</c:if>>打野</option>
@@ -133,7 +131,7 @@
                                     <span class="required">*</span>
                                   </label>
                                   <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <input id="price" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="price" placeholder="请输入定价" autocomplete="off" required="required" type="text" value="${hero.price}">
+                                    <input id="price" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="price" placeholder="请输入定价" autocomplete="off" required="required" type="text" value="${hero.price}" readonly="readonly">
                                   </div>
                                 </div>
                                 
@@ -142,7 +140,7 @@
                                     <span class="required">*</span>
                                   </label>
                                   <div class="col-md-2 col-sm-6 col-xs-12">
-                                    <input id="motto" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="motto" placeholder="请输入座右铭" autocomplete="off" required="required" type="text" value="${hero.motto}">
+                                    <input id="motto" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="motto" placeholder="请输入座右铭" autocomplete="off" required="required" type="text" value="${hero.motto}" readonly="readonly">
                                   </div>
                                 </div>
 
@@ -157,14 +155,14 @@
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="skill_q" name="skill_q" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_q}">
+                                      <input type="text" id="skill_q" name="skill_q" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_q}" readonly="readonly">
                                     </div>
 
                                     <label class="control-label col-md-1 col-sm-3 col-xs-12 health" for="rPeriod">W：
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="skill_w" name="skill_w" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_w}">
+                                      <input type="text" id="skill_w" name="skill_w" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_w}" readonly="readonly">
                                     </div>
 
                                   </div>
@@ -174,14 +172,14 @@
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="skill_e" name="skill_e" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_e}">
+                                      <input type="text" id="skill_e" name="skill_e" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.skill_e}" readonly="readonly">
                                     </div>
 
                                     <label class="control-label col-md-1 col-sm-3 col-xs-12 health" for="rTimeout">R：
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="skill_r" name="skill_r" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入"  value="${hero.skill_r}">
+                                      <input type="text" id="skill_r" name="skill_r" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入"  value="${hero.skill_r}" readonly="readonly">
                                     </div>
                                   </div>
 
@@ -190,7 +188,7 @@
                                       <span class="required">*</span>
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
-                                      <input type="text" id="unactive" name="unactive" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.unactive}">
+                                      <input type="text" id="unactive" name="unactive" required="required" class="form-control col-md-7 col-xs-12"  placeholder="请输入" value="${hero.unactive}" readonly="readonly">
                                     </div>
                                   </div>
                                 </fieldset>
@@ -210,7 +208,7 @@
                                       <input type="text" id="lableList[0].key" name="lableList[0].key" class="form-control col-md-7 col-xs-12" placeholder="（键）">
                                     </div>
 
-                                    <label class="control-label col-md-1 col-sm-3 col-xs-12" style="text-align: center;">=
+                                    <label class="control-label col-md-1 col-sm-3 col-xs-12" style="text-align: center;">
                                     </label>
                                     <div class="col-md-2 col-sm-6 col-xs-12">
                                       <input type="text" id="lableList[0].value" name="lableList[0].value" class="form-control col-md-7 col-xs-12" placeholder="（值）">
@@ -228,7 +226,6 @@
                     <div class="ln_solid"></div>
                     <div class="form-group">
                       <div class="col-md-3 col-md-offset-4">
-                        <button id="send" type="submit" class="btn btn-success">提交</button>&nbsp;&nbsp;
                         <button id="cancel" type="button" class="btn btn-primary" onclick="addReturn('<%=request.getContextPath()%>/heros/infos')">返回</button>
                       </div>
                     </div>

@@ -26,4 +26,7 @@ public class URLConstant {
 	public static final String EDIT = "/edit/{id}";
 	
 	public static final String DELETE = "/delete/{id}";
+	
+	public static final String DETAILS = "/details/{id}";
+
 }

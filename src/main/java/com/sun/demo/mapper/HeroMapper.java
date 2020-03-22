@@ -46,7 +46,7 @@ public interface HeroMapper {
 	  * 修改人物信息
 	  * @param hero
 	  */
-	 public Heros updateHero(Heros hero);
+	 public void updateHero(Heros hero);
 	 
 
 }

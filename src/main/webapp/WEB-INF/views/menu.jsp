@@ -98,7 +98,7 @@ footer {
           <li>
             <a>
               <i class="fa fa-laptop"></i>
-              在线文档
+              操作手册
               <span class="fa fa-chevron-down"></span>
             </a>
             <ul class="nav child_menu">

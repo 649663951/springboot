@@ -93,8 +93,17 @@ public class HerosController {
 		return Views.EDIT;
 	}
 	
+	
+	@RequestMapping(value=URLConstant.DETAILS , method=RequestMethod.GET)
+	public String detailsHero(Model model , @PathVariable String id) {
+		Heros hero = herosInfoService.getHero(id);
+		model.addAttribute("hero", hero);
+		return Views.DETAILS;
+	}
+	
 	@RequestMapping(value=URLConstant.EDITS , method=RequestMethod.POST)
 	public String editHeros(Model model , HttpServletRequest request) {
+		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String anotherName = request.getParameter("anotherName");
 		String position = request.getParameter("position");
@@ -107,6 +116,7 @@ public class HerosController {
 		String skill_r = request.getParameter("skill_r");
 		String unactive = request.getParameter("unactive");
 		Heros hero = new Heros();
+		hero.setId(id);
 		hero.setName(name);
 		hero.setAnotherName(anotherName);
 		hero.setPosition(position);
