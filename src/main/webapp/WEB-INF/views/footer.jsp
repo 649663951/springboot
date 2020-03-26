@@ -5,7 +5,8 @@
           </div>
           <div class="clearfix"></div>
         </footer>
-    <%-- <%@ include file="/WEB-INF/views/WaterMark1.0.jsp"%> --%>   
+    <%@ include file="/WEB-INF/views/WaterMark1.0.jsp"%>
+    
         <!-- jQuery -->
     <script src="<%=request.getContextPath() %>/gentelella/vendors/jquery/dist/jquery.min.js"></script>
     <script src="<%=request.getContextPath() %>/gentelella/vendors/jquery/dist/jquery-form.js"></script>
@@ -26,9 +27,7 @@
   	<script src="<%=request.getContextPath() %>/gentelella/vendors/bootstrap3-dialog/js/bootstrap-dialog.min.js"></script>
 	<script src="<%=request.getContextPath() %>/gentelella/vendors/bootstrap-typeahead/bootstrap-typeahead.js"></script>
 	<!-- common js -->
-	<%-- <script src="<%=request.getContextPath() %>/js/commonData.js"></script> --%>
 	<script src="<%=request.getContextPath() %>/js/common.js"></script>
-	<%-- <script src="<%=request.getContextPath() %>/cloud/js/message.js"></script> --%>
 	
 	<!-- 动态表格 -->
 	 <script src="<%=request.getContextPath() %>/gentelella/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
