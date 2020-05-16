@@ -8,7 +8,6 @@
     <%@ include file="/WEB-INF/views/WaterMark1.0.jsp"%>
     
         <!-- jQuery -->
-    <script src="<%=request.getContextPath() %>/gentelella/vendors/jquery/dist/jquery.min.js"></script>
     <script src="<%=request.getContextPath() %>/gentelella/vendors/jquery/dist/jquery-form.js"></script>
     <!-- Bootstrap -->
     <script src="<%=request.getContextPath() %>/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>

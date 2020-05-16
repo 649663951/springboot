@@ -29,3 +29,15 @@ create table heros_info(
   is_Vaild   VARCHAR(2) COMMENT '有效标识  0无效  1有效'
 );
 
+
+create table roles_info(
+  id           bigint(10) PRIMARY KEY AUTO_INCREMENT COMMENT '主键id',
+  rolecode    VARCHAR(20) COMMENT '角色代号',
+  roleName    VARCHAR(20) COMMENT '角色名',
+  created_By   VARCHAR(20) COMMENT '创建人',
+  created_Date datetime COMMENT '创建时间',
+  update_By   VARCHAR(20) COMMENT '更新人',
+  update_Date datetime COMMENT '修改时间',
+  is_Vaild   VARCHAR(2) COMMENT '有效标识  0无效  1有效'
+);
+

@@ -22,6 +22,10 @@ public class URLConstant {
 	public static final String ADD = "/add";
 	
 	public static final String EDITS = "/edits";
+	
+	public static final String DEMO = "/demo";
+	
+	public static final String SELECT = "/select";
 		
 	public static final String EDIT = "/edit/{id}";
 	

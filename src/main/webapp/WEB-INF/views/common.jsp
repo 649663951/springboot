@@ -21,12 +21,14 @@
     <!-- table分页css -->
     <link href="<%=request.getContextPath() %>/gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <script type="text/javascript" src="<%=request.getContextPath()%>/js/common.js"></script>
+    <!-- 下拉框支持搜索 -->
+    <script type="text/javascript" src="<%=request.getContextPath() %>/lib/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/lib/select2/4.0.4/css/select2.min.css"  rel="stylesheet">
+    <script type="text/javascript" src="<%=request.getContextPath() %>/lib/select2/4.0.4/js/select2.min.js" ></script>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    
-    
     <!-- 附件上传相关css 、JS -->
-<!-- webupload -->
-<link rel="stylesheet" type="text/css" 	href="<%=request.getContextPath() %>/gentelella/vendors/dropzone/dist/min/dropzone.min.css" />
+    <!-- webupload -->
+    <link rel="stylesheet" type="text/css" 	href="<%=request.getContextPath() %>/gentelella/vendors/dropzone/dist/min/dropzone.min.css" />
 
 <script>
 	var localObj = window.location;
@@ -39,9 +41,7 @@
 	}
 </script>
 <style>
-/* .breadcrumb{
-	background:#f8f8f8;
-} */
+
 .dataTables_wrapper>.row {
     overflow: unset !important;
 }
@@ -51,6 +51,12 @@ table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td
 
 .nav-sm .container.body .right_col ,.nav-md .container.body .right_col ,.nav-lg .container.body .right_col {
    margin-left: 180px !important;
+}   
+ .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 31px;
+    border-radius: 0px;
+    border: 1px solid #ddd;
 }
 
 

@@ -59,6 +59,7 @@ footer {
 							class="fa fa-chevron-down"></span></a>
 						<ul class="nav child_menu">
 							<li><a href="<%=request.getContextPath()%>/heros/infos">人物设置</a></li>
+							<li><a href="<%=request.getContextPath()%>/demo">样式演示</a></li>
 						</ul>
 					</li>
 				</ul>

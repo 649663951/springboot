@@ -38,7 +38,7 @@
                 <input type="password" name="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-				<input type="submit"  onClick="login()" class="submit" value="login">
+				<input type="submit"  style="margin-left: 120px" onClick="login()" class="submit" value="login">
               </div>
 
               <div class="clearfix"></div>

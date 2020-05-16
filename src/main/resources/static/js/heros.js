@@ -58,3 +58,8 @@ function removeHero(id) {
          }
      });
 }
+
+function setMultiSelect(code,name){
+	$('#subSystemName', window.opener.document).val(code);
+	$('#subSystemName', window.opener.document).val(name);
+}

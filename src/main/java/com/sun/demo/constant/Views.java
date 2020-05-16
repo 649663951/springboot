@@ -17,6 +17,10 @@ public class Views {
 	
 	public static final String HERO="hero";
 	
+	public static final String DEMO="demo";
+	
+	public static final String DUBBO_SELECT="select";
+	
 	public static final String ADD="hero/add";
 	
 	public static final String EDIT="hero/edit";
